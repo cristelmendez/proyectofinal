@@ -27,15 +27,6 @@ EditText password =null;
         txtcorreo = (EditText) findViewById(R.id.correo);
         password = (EditText) findViewById(R.id.password);
 
-
-        txnr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this,Registro.class);
-                MainActivity.this.startActivity(intent);
-            }
-        });
-
     }
     //click en el boton login
     public void login(View view){

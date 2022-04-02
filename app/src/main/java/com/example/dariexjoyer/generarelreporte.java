@@ -27,7 +27,7 @@ public class generarelreporte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generarelreporte);
-        String url= glob.url+"reporteVentas.php?iduser="+ glob.iduser;
+        String url= glob.url+"insertotales.php?iduser="+ glob.iduser;
         RequestQueue queue = Volley.newRequestQueue(this);
         lvReporteVenta=findViewById(R.id.lvReporteVenta);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -43,10 +43,10 @@ public class generarelreporte extends AppCompatActivity {
                         JSONObject jsonObject=jsonArray.getJSONObject(i);
                         String producto=jsonObject.getString("producto");
                         String cantidad=jsonObject.getString("cantidad");
-                        String precioUnitario	=jsonObject.getString("precioUnitario");
+                        String preunidad=jsonObject.getString("preunidad");
                         String total=jsonObject.getString("total");
                         //agregar registro a la tabla
-                        tabla.add(producto+" | Precio:$"+precioUnitario+" x $"+cantidad+" = $"+total);
+                        tabla.add(producto+" | Precio:$"+preunidad+" x $"+cantidad+" = $"+total);
                         granTotal+=Float.parseFloat(total);
                     }
                     tabla.add("Gran total: $"+granTotal);

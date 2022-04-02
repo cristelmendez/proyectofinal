@@ -27,6 +27,7 @@
         android:backgroundTint="@color/teal_200"
         android:onClick="botonMas"
         android:text="+"
+        android:textColor="#0D47A1"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgProducto" />
@@ -54,6 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="productos"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -94,6 +97,7 @@
         android:layout_marginTop="28dp"
         android:text="Clcik en + para agregar productos"
         android:textSize="20sp"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMenos" />
