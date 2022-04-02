@@ -1,14 +1,6 @@
 package com.example.dariexjoyer;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.app.Activity;
 
-import android.os.Bundle;
-
-public class Registro extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
-    }
+public class Registro extends Activity {
 }

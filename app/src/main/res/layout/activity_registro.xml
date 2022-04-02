@@ -5,52 +5,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Registro">
+    tools:context=".Registro"
+    android:background="@drawable/sagegreen">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inicio  Sesion"
         android:layout_gravity="center"
-        android:textSize="25dp"
+        android:textSize="60dp"
+        android:textColor="#000000"
         />
 
+<TextView
+    android:id="@+id/txtt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/txtt"
+    android:textSize="20dp"
+    android:textColor="#000000"
+    />
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="nombre"
-        android:inputType="text"/>
+        android:hint="@string/edit1"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+
+    <TextView
+        android:id="@+id/txtC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtc"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
 
     <EditText
         android:id="@+id/correo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Correo"
-        android:inputType="text"/>
+        android:hint="@string/editt2"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/txttc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txttc"
+        android:textSize="20dp"
+        android:textColor="#000000" />
 
     <EditText
-        android:id="@+id/passw"
+        android:id="@+id/edit3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="text"/>
+        android:hint="@string/edit3"
+        android:inputType="text"
+        android:minHeight="48dp" />
+
+
+    <TextView
+        android:id="@+id/txte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txte"
+        android:textSize="20dp"
+        android:textColor="#000000"/>
 
     <EditText
-        android:id="@+id/edad"
+        android:id="@+id/edit4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="edad"
-        android:inputType="number"/>
+        android:hint="@string/edit4"
+        android:inputType="number"
+        android:minHeight="48dp" />
 
 
     <Button
-        android:id="@+id/rest"
+        android:id="@+id/btng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="registar"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="@string/btng"
+        android:backgroundTint="@color/teal_200"
+        app:cornerRadius="20dp"/>
+
+
+    <Button
+        android:id="@+id/btngn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="208dp"
+        android:layout_marginLeft="100dp"
+        android:text="@string/btngn"
+        android:backgroundTint="@color/teal_200"
+        app:cornerRadius="20dp"/>
 
 
 

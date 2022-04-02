@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">Dariexjoyer</string>
+    <string name="app_name">jolleriaDaxemi</string>
+    <string name="txt_nombre">Usuario:</string>
+    <string name="txt_contrasena">Contraseña:</string>
+    <string name="correo">Usuario</string>
+    <string name="password">password</string>
+    <string name="btn1">Iniciar sesion</string>
+    <string name="btn2">salir</string>
+    <string name="txnr">Registrar</string>
+    <string name="btngn">Sigueinte</string>
+
+    <string name="txtt">Nombre: </string>
+    <string name="txtc">Correo:</string>
+    <string name="txttc">contraseña:</string>
+    <string name="txte">Edad:</string>
+    <string name="edit1">Nombre</string>
+    <string name="editt2">Correo</string>
+    <string name="edit3">password</string>
+    <string name="edit4">Edad</string>
+    <string name="btng">registar</string>
+
+
+    <string name="modelos">Modelos</string>
+    <string name="descripcion">Descripcion</string>
+
+
+    <string name="txtR">Inicio el Registro</string>
+
+
 </resources>
