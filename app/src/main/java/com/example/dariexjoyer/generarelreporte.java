@@ -27,7 +27,7 @@ public class generarelreporte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generarelreporte);
-        String url= glob.url+"insertotales.php?iduser="+ glob.iduser;
+        String url= glob.url+"costostotales.php?iduser="+ glob.iduser;
         RequestQueue queue = Volley.newRequestQueue(this);
         lvReporteVenta=findViewById(R.id.lvReporteVenta);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {

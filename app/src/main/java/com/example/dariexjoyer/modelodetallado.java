@@ -109,7 +109,7 @@ public class modelodetallado extends AppCompatActivity {
             Toast.makeText(this, "Debe de haber por lo menos un producto", Toast.LENGTH_SHORT).show();
         }
         else {
-            String url= glob.url+"insertotales.php?iduser="+ glob.iduser+"&categoria="+catSel+"&producto="+prodSel+"&cantidades="+cantidad+"&ppreunidad="+precio+"&total="+precio*cantidad;
+            String url= glob.url+"insertotales.php?iduser="+ glob.iduser+"&categoria="+catSel+"&producto="+prodSel+"&cantidades="+cantidad+"&preunidad="+precio+"&total="+precio*cantidad;
             RequestQueue queue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
                 if(response.equals("0")){
