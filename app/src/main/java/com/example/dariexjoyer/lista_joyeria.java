@@ -23,7 +23,7 @@ public class lista_joyeria extends AppCompatActivity {
             lvCategorias=(ListView)findViewById(R.id.lvCategorias);
 
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_list_item_1, android.R.id.text1, glob.cat);
+                    android.R.layout.simple_list_item_1, android.R.id.text1, general.cat);
 
             lvCategorias.setAdapter(adapter);
 
@@ -40,8 +40,4 @@ public class lista_joyeria extends AppCompatActivity {
             });
         }
 
-        public void btnVerCompras(android.view.View view){
-            Intent intent = new Intent(lista_joyeria.this, generarelreporte.class);
-            startActivity(intent);
-        }
     }

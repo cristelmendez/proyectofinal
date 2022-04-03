@@ -32,17 +32,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnVerCompras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="132dp"
-        android:backgroundTint="@color/teal_200"
-        android:onClick="btnVerCompras"
-        android:text="Ver Compras"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvCategorias" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

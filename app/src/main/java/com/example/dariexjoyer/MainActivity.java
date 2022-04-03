@@ -31,7 +31,7 @@ EditText password =null;
     //click en el boton login
     public void login(View view){
         String correo = txtcorreo.getText().toString();
-        String url= glob.url+"usuarcreado.php?correo="+txtcorreo.getText()+"&pass="+password.getText();
+        String url= general.url+"usuarcreado.php?correo="+txtcorreo.getText()+"&pass="+password.getText();
         if(correo.equals("")  || !validatecorreo(correo)){
             //mostrar mensaje de error
             Toast.makeText(this, "El correo es incorrecto", Toast.LENGTH_SHORT).show();
@@ -44,7 +44,7 @@ EditText password =null;
                 }
                 else{
                     Toast.makeText(this, "Usuario existe", Toast.LENGTH_SHORT).show();
-                    glob.iduser = response;
+                    general.iduser = response;
                     Intent intent = new Intent(this, lista_joyeria.class);
                     startActivity(intent);
                 }

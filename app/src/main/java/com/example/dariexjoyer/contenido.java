@@ -2,9 +2,7 @@ package com.example.dariexjoyer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -21,13 +19,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class generarelreporte extends AppCompatActivity {
+public class contenido extends AppCompatActivity {
     ListView balance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_generarelreporte);
-        String url= glob.url+"costostotales.php?iduser="+ glob.iduser;
+        setContentView(R.layout.activity_contenido);
+        String url= general.url+"costostotales.php?iduser="+ general.iduser;
         RequestQueue queue = Volley.newRequestQueue(this);
         balance=findViewById(R.id.lvReporteVenta);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
@@ -36,27 +34,27 @@ public class generarelreporte extends AppCompatActivity {
                 try {
                     JSONArray jsonArray=response.getJSONArray("data");
                     int tam=jsonArray.length();
-                    ArrayList tabla;
-                    tabla=new ArrayList();
-                    float granTotal=0;
+                    ArrayList lista;
+                    lista=new ArrayList();
+                    float Total=0;
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject jsonObject=jsonArray.getJSONObject(i);
                         String producto=jsonObject.getString("producto");
                         String cantidad=jsonObject.getString("cantidad");
                         String preunidad=jsonObject.getString("preunidad");
                         String total=jsonObject.getString("total");
-                        //agregar registro a la tabla
-                        tabla.add(producto+" | Precio:$"+preunidad+" x $"+cantidad+" = $"+total);
-                        granTotal+=Float.parseFloat(total);
+
+                        lista.add(producto+" | Precio:$"+preunidad+" x $"+cantidad+" = $"+total);
+                        Total+=Float.parseFloat(total);
                     }
-                    tabla.add("Gran total: $"+granTotal);
-                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(generarelreporte.this,
-                            android.R.layout.simple_list_item_1, tabla);
+                    lista.add("Gran total: $"+Total);
+                    final ArrayAdapter<String> adapter = new ArrayAdapter<String>(contenido.this,
+                            android.R.layout.simple_list_item_1, lista);
 
                     balance.setAdapter(adapter);
                 }
                 catch (Exception e){
-                    Toast.makeText(generarelreporte.this, "No hay datos ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(contenido.this, "No registro datos", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -64,15 +62,12 @@ public class generarelreporte extends AppCompatActivity {
                 , new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(generarelreporte.this, "No hay datos", Toast.LENGTH_LONG).show();
+                Toast.makeText(contenido.this, "No registro datos", Toast.LENGTH_LONG).show();
 
             }
         });
         queue.add(jsonObjectRequest);
     }
-    //METODO PARA VOLVER AL MENU PRINCIPAL
-    public void btnIrCategorias(android.view.View view){
-        Intent intent=new Intent(this,finalizarpedido.class);
-        startActivity(intent);
-    }
+
+
 }

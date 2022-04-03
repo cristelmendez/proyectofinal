@@ -64,17 +64,17 @@ public class modelodetallado extends AppCompatActivity {
             imgProducto.setImageResource(R.mipmap.cuarsorosa);
         }
         //INICIALIZAMOS LA VARIABLE cat QUE POSTERIORMENTE CONTENDRA TODOS LOS PRODUCTO DE LA CATEGORIA SELECCIONADA
-        float[] cat = {};;
+        float[] articulos = {};;
         if(catSel.equals("anillo")){
-            cat=glob.precioanillo;
+            articulos=general.precioanillo;
         }
         if(catSel.equals("collar")){
-            cat=glob.preciocollar;
+            articulos=general.preciocollar;
         }
         if(catSel.equals("aretes")){
-            cat=glob.precioaretes;
+            articulos=general.precioaretes;
         }
-        precio=cat[Integer.parseInt(position)];
+        precio=articulos[Integer.parseInt(position)];
         tvProducto.setText(prodSel+" $"+precio);
     }
     public void agregar(View view)
@@ -91,7 +91,7 @@ public class modelodetallado extends AppCompatActivity {
             Toast.makeText(this, "seleccione al menos un articulo de la joyeria ", Toast.LENGTH_SHORT).show();
         }
         else {
-            String url= glob.url+"insertotales.php?iduser="+ glob.iduser+"&categoria="+catSel+"&producto="+prodSel+"&cantidades="+cantidad+"&preunidad="+precio+"&total="+precio*cantidad;
+            String url= general.url+"insertotales.php?iduser="+ general.iduser+"&categoria="+catSel+"&producto="+prodSel+"&cantidades="+cantidad+"&preunidad="+precio+"&total="+precio*cantidad;
             RequestQueue queue = Volley.newRequestQueue(this);
             StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
                 if(response.equals("0")){

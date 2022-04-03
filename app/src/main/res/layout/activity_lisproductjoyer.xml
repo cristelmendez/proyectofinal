@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Productos"
+        android:text="Articulos"
         android:textSize="60dp"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/lvProductos"
+        android:id="@+id/articulos"
         android:layout_width="358dp"
         android:layout_height="254dp"
         android:layout_marginTop="60dp"
@@ -29,19 +29,6 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <Button
-        android:id="@+id/btnVerComprasProd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="132dp"
-        android:backgroundTint="@color/teal_200"
-        android:onClick="irReporteVenta"
-        android:text="Ver Compras"
-        app:cornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvProductos" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

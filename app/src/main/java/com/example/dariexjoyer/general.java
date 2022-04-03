@@ -1,6 +1,6 @@
 package com.example.dariexjoyer;
 
-public class glob {
+public class general {
 
 
     public static String iduser = "";
