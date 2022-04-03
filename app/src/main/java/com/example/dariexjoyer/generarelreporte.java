@@ -22,14 +22,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 public class generarelreporte extends AppCompatActivity {
-    ListView lvReporteVenta;
+    ListView balance;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generarelreporte);
         String url= glob.url+"costostotales.php?iduser="+ glob.iduser;
         RequestQueue queue = Volley.newRequestQueue(this);
-        lvReporteVenta=findViewById(R.id.lvReporteVenta);
+        balance=findViewById(R.id.lvReporteVenta);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -52,8 +52,8 @@ public class generarelreporte extends AppCompatActivity {
                     tabla.add("Gran total: $"+granTotal);
                     final ArrayAdapter<String> adapter = new ArrayAdapter<String>(generarelreporte.this,
                             android.R.layout.simple_list_item_1, tabla);
-                    //LLENAMOS EL LISTVIEW CON LAS CATEGORIAS
-                    lvReporteVenta.setAdapter(adapter);
+
+                    balance.setAdapter(adapter);
                 }
                 catch (Exception e){
                     Toast.makeText(generarelreporte.this, "No hay datos ", Toast.LENGTH_SHORT).show();

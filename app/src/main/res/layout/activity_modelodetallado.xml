@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imgProducto"
-        android:layout_width="372dp"
+        android:layout_width="match_parent"
         android:layout_height="236dp"
         android:layout_marginTop="12dp"
         android:src="@mipmap/collarsirena"
@@ -19,35 +19,18 @@
         app:layout_constraintTop_toBottomOf="@+id/tvProducto" />
 
     <Button
-        android:id="@+id/btnMas"
+        android:id="@+id/btnagregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="84dp"
         android:background="#4CAF50"
-        android:backgroundTint="@color/teal_200"
-        android:onClick="botonMas"
-        android:text="+"
-        android:textColor="#0D47A1"
-        android:textSize="34sp"
+        android:backgroundTint="#FFC107"
+        android:onClick="agregar"
+        android:text="agregar producto"
+        android:textColor="#F3EFEE"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgProducto" />
-
-    <Button
-        android:id="@+id/btnMenos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="180dp"
-        android:background="#FF0000"
-        android:backgroundTint="@color/teal_200"
-        android:onClick="botonMenos"
-        android:text="-"
-        android:textSize="34sp"
-        app:layout_constraintEnd_toStartOf="@+id/btnMas"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgProducto" />
 
     <TextView
@@ -55,53 +38,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="productos"
+        android:text="Articulos de joyeria"
         android:textColor="#000000"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnProcesar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="20dp"
-        android:onClick="botonProcesar"
-        android:text="Agregar&gt;&gt;"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalDetalle"
-        android:layout_marginLeft="60dp"
-        app:cornerRadius="20dp"
-        android:backgroundTint="@color/teal_200"/>
 
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:onClick="botonCancelar"
-        android:text="&lt;&lt;Cancelar"
-        app:layout_constraintEnd_toStartOf="@+id/btnProcesar"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTotalDetalle"
-        android:layout_marginLeft="60dp"
-        app:cornerRadius="20dp"
-        android:backgroundTint="@color/teal_200"/>
 
-    <TextView
-        android:id="@+id/tvTotalDetalle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Clcik en + para agregar productos"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenos" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

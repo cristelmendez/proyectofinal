@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registro">
+
+    <TextView
+        android:id="@+id/registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registo"/>
+
+
+
+
+    <TextView
+        android:id="@+id/txtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtt"
+        android:layout_below="@+id/registro"/>
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtt"
+        android:hint="@string/txtt" />
+
+
+
+    <TextView
+        android:id="@+id/txtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtc"
+        android:layout_below="@+id/edit1"/>
+
+    <EditText
+        android:id="@+id/editcore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtc"
+        android:hint="@string/editcore" />
+
+
+
+    <TextView
+        android:id="@+id/txttc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txttc"
+        android:layout_below="@+id/editcore"/>
+
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txttc"
+        android:hint="@string/edit3" />
+
+
+
+    <TextView
+        android:id="@+id/txte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txte"
+        android:layout_below="@+id/edit3"/>
+
+    <EditText
+        android:id="@+id/edit4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txte"
+        android:hint="@string/edit4" />
+
+
+    <Button
+        android:id="@+id/btng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit4"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/btng"
+        app:cornerRadius="20dp" />
+
+</RelativeLayout>

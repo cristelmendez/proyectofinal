@@ -19,7 +19,7 @@ import com.android.volley.toolbox.Volley;
 public class modelodetallado extends AppCompatActivity {
     //inicializar imageView
     ImageView imgProducto;
-    TextView tvProducto,tvTotalDetalle;
+    TextView tvProducto;
     Button btnMenos, btnMas;
     float precio=0;
     int cantidad=0;
@@ -35,9 +35,7 @@ public class modelodetallado extends AppCompatActivity {
         String position = intent.getStringExtra("position");
         imgProducto = findViewById(R.id.imgProducto);
         tvProducto = findViewById(R.id.tvProducto);
-        btnMenos = findViewById(R.id.btnMenos);
-        btnMas = findViewById(R.id.btnMas);
-        tvTotalDetalle = findViewById(R.id.tvTotalDetalle);
+        btnMas = findViewById(R.id.btnagregar);
         if (prodSel.contains("aretesoro")) {
             imgProducto.setImageResource(R.mipmap.aretesoro);
         }
@@ -79,34 +77,18 @@ public class modelodetallado extends AppCompatActivity {
         precio=cat[Integer.parseInt(position)];
         tvProducto.setText(prodSel+" $"+precio);
     }
-    public void botonMas(View view)
+    public void agregar(View view)
     {
         cantidad++;
         float subTotal=precio*cantidad;
-        tvTotalDetalle.setText(cantidad+" x $"+precio+": $"+String.valueOf(subTotal));
-    }
-    public void botonMenos(View view)
-    {
-        cantidad--;
-        if(cantidad<=0){
-            cantidad=0;
-            tvTotalDetalle.setText("Sub total: ");
-            Toast.makeText(this, "Debe de haber por lo menos un producto", Toast.LENGTH_SHORT).show();
-        }else{
-            float subTotal=precio*cantidad;
-            tvTotalDetalle.setText(cantidad+" x $"+precio+": $"+String.valueOf(subTotal));
-        }
-    }
-    public void botonCancelar(View view)
-    {
-        //abre la actividad ListaProductos
-        Intent intent = new Intent(modelodetallado.this, lisproductjoyer.class);
+        Intent intent = new Intent(modelodetallado.this, generarelreporte.class);
         startActivity(intent);
     }
+
     public void botonProcesar(View view)
     {
         if (cantidad==0){
-            Toast.makeText(this, "Debe de haber por lo menos un producto", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "seleccione al menos un articulo de la joyeria ", Toast.LENGTH_SHORT).show();
         }
         else {
             String url= glob.url+"insertotales.php?iduser="+ glob.iduser+"&categoria="+catSel+"&producto="+prodSel+"&cantidades="+cantidad+"&preunidad="+precio+"&total="+precio*cantidad;
@@ -116,7 +98,7 @@ public class modelodetallado extends AppCompatActivity {
                     Toast.makeText(this, "Datos no guardado", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(this, "Datos guardados exitosamente", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "se guardo correctamente", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(this, generarelreporte.class);
                     startActivity(intent);
                 }

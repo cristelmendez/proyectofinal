@@ -14,7 +14,7 @@
         android:theme="@style/Theme.Dariexjoyer"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".finalizarpedido"
+            android:name=".registro"
             android:exported="false" />
         <activity
             android:name=".modelodetallado"
